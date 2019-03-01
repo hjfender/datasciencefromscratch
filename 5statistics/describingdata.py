@@ -62,8 +62,14 @@ plt.show()
 num_points = len(num_friends)       # 204
 largest_value = max(num_friends)    # 100
 smallest_value = min(num_friends)   # 1
+print(num_points)
+print(largest_value)
+print(smallest_value)
 
 sorted_values = sorted(num_friends)
-smallest_values = sorteddict_values[0]      # 1
+smallest_values = sorted_values[0]      # 1
 second_smallest_value = sorted_values[1]    # 1
 second_largest_value = sorted_values[-2]    # 49
+print(smallest_values)
+print(second_smallest_value)
+print(second_largest_value)

@@ -1,9 +1,10 @@
 from describingdata import num_friends
+from collections import Counter
 
 def mean(x):
     return sum(x) / len(x)
 
-mean(num_friends)   # 7.333333...
+print(mean(num_friends))  # 7.333333...
 
 def median(v):
     """finds the 'middle-most' value of v"""
@@ -20,7 +21,7 @@ def median(v):
         hi = midpoint
         return (sorted_v[lo] + sorted_v[hi]) / 2
 
-median(num_friends) # 6.0
+print(median(num_friends)) # 6.0
 
 # generalization of median
 def quantile(x, p):
@@ -30,17 +31,17 @@ def quantile(x, p):
 
 # median is the 0.50 quantile, value that 50% of the date lies under
 
-quantile(num_friends, 0.10) # 1
-quantile(num_friends, 0.25) # 3
-quantile(num_friends, 0.75) # 9
-quantile(num_friends, 0.90) # 13
+print(quantile(num_friends, 0.10)) # 1
+print(quantile(num_friends, 0.25)) # 3
+print(quantile(num_friends, 0.75)) # 9
+print(quantile(num_friends, 0.90)) # 13
 
 # most common value
 def mode(x):
     """returns a list, might be more than one mode"""
     counts = Counter(x)
     max_count = max(counts.values())
-    return [x_i for x_i, count in counts.iteritems()
+    return [x_i for x_i, count in counts.items()
             if count == max_count]
 
-mode(num_friends)   # 1 and 6
+print(mode(num_friends))   # 1 and 6
