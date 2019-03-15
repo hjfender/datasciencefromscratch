@@ -84,4 +84,4 @@ word_counts = Counter(document)
 
 # print the 10 most common words and their counts
 for word, count in word_counts.most_common(10):
-    print word, count
+    print(word, count)
