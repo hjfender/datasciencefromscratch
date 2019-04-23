@@ -1,3 +1,5 @@
+from entropy import partition_entropy
+
 inputs = [
 	({'level':'Senior', 'lang':'Java', 'tweets':'no', 'phd':'no'},	   False),
 	({'level':'Senior', 'lang':'Java', 'tweets':'no', 'phd':'yes'},	   False),
@@ -27,7 +29,7 @@ def partition_by(inputs, attribute):
 def partition_entropy_by(inputs, attribute):
 	"""computes the entropy corresponding to the given partition"""
 	partitions = partition_by(inputs, attribute)
-	return partition_entropy_by(partitions.values())
+	return partition_entropy(partitions.values())
 
 for key in ['level', 'lang', 'tweets', 'phd']:
 	print(key, partition_entropy_by(inputs, key))
