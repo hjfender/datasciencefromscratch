@@ -10,7 +10,7 @@ data_science_days = map_reduce(status_updates,
 
 def words_per_user_mapper(status_update):
 	user = status_update["username"]
-	for word in tokenize(sstatus_update["text"]):
+	for word in tokenize(status_update["text"]):
 		yield (user, (word, 1))
 
 def most_popular_word_reducer(user, words_and_counts):
